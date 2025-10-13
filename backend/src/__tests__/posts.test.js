@@ -1,6 +1,5 @@
 import mongoose from 'mongoose';
 import { describe, expect, test } from '@jest/globals';
-
 import { createPost } from '../services/posts.js';
 import { Post } from '../db/models/post.js';
 
@@ -13,7 +12,6 @@ describe('creating posts', () => {
       tags: ['mongoose', 'mongodb'],
     };
     const createdPost = await createPost(post);
-
     expect(createdPost._id).toBeInstanceOf(mongoose.Types.ObjectId);
     const foundPost = await Post.findById(createdPost._id);
     expect(foundPost).toEqual(expect.objectContaining(post));
@@ -22,7 +20,7 @@ describe('creating posts', () => {
   });
   test('without title should fail', async () => {
     const post = {
-      author: 'Daniel Bugl',
+      author: 'Hadley Figueroa',
       contents: 'Post with no title',
       tags: ['empty'],
     };
