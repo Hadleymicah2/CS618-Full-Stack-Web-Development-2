@@ -1,4 +1,5 @@
-import PropTypes from 'prop-types';
+import PropTypes from 'prop-types'
+
 export function PostSorting({ fields = [] }) {
   return (
     <div>
@@ -17,8 +18,9 @@ export function PostSorting({ fields = [] }) {
         <option value={'descending'}>descending</option>
       </select>
     </div>
-  );
+  )
 }
+
 PostSorting.propTypes = {
   fields: PropTypes.arrayOf(PropTypes.string).isRequired,
-};
+}

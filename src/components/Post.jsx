@@ -1,4 +1,4 @@
-import PropTypes from 'prop-types';
+import PropTypes from 'prop-types'
 
 export function Post({ title, contents, author }) {
   return (
@@ -12,11 +12,11 @@ export function Post({ title, contents, author }) {
         </em>
       )}
     </article>
-  );
+  )
 }
 
 Post.propTypes = {
   title: PropTypes.string.isRequired,
   contents: PropTypes.string,
   author: PropTypes.string,
-};
+}
