@@ -1,7 +1,7 @@
-import { PostList } from './components/PostList.jsx';
-import { CreatePost } from './components/CreatePost.jsx';
-import { PostFilter } from './components/PostFilter.jsx';
-import { PostSorting } from './components/PostSorting.jsx';
+import { PostList } from './components/PostList.jsx'
+import { CreatePost } from './components/CreatePost.jsx'
+import { PostFilter } from './components/PostFilter.jsx'
+import { PostSorting } from './components/PostSorting.jsx'
 
 const posts = [
   {
@@ -9,10 +9,10 @@ const posts = [
     contents: "Let's become full-stack developers!",
     author: 'Daniel Bugl',
   },
-  { title: 'Hello React!' },
-];
+  { title: 'Hello React Live!' },
+]
 
-export function Blog() {
+export function App() {
   return (
     <div style={{ padding: 8 }}>
       <CreatePost />
@@ -25,5 +25,5 @@ export function Blog() {
       <hr />
       <PostList posts={posts} />
     </div>
-  );
+  )
 }
